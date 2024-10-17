@@ -122,8 +122,11 @@ Replace `<container_name>` with the name of your running FastAPI container.
 
 ## API Endpoints
 
+To see the parameters, please follow the link. http://localhost:8000/docs
+
 - **POST** `/auth/register`: Register a new user.
 - **POST** `/auth/login`: Login and receive a JWT token.
+- **POST** `/auth/refresh`: Refresh an access token.
 - **POST** `/inventory/`: Create a new inventory item.
 - **GET** `/inventory/`: Get a list of inventory items (supports pagination).
 - **GET** `/inventory/{id}`: Get a single item by its ID.

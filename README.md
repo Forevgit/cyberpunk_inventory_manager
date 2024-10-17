@@ -62,11 +62,19 @@ app/
 
 2. **Set up the environment:**
 
-   Create a `.env` file in the root directory with your environment variables:
+   Create a `.env` file in the root directory with your environment variables (check .env.example):
 
    ```env
-   DATABASE_URL=postgresql+asyncpg://user:password@db/inventory_db
-   SECRET_KEY=your_secret_key
+   DB_USER=DB_USER
+   DB_PASSWORD=DB_PASSWORD
+   DB_HOST=DB_HOST
+   DB_PORT=DB_PORT
+   DB_NAME=DB_NAME
+
+   SECRET_KEY=SECRET_KEY
+
+   ALGORITHM=HS256
+   ACCESS_TOKEN_EXPIRE_MINUTES=30
    ```
 
 ### Running the Application
@@ -84,6 +92,14 @@ This will:
 - Build the FastAPI application and set up a PostgreSQL database.
 - Run database migrations.
 - Start the API at `http://localhost:8000`.
+
+### Running Migrations
+
+   To ensure the database schema is up-to-date, run the migrations with the following command:
+
+```bash
+   docker exec -it <container_name> alembic upgrade head
+```
 
 ### Running Tests
 

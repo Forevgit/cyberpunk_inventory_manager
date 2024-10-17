@@ -68,7 +68,7 @@ app/
 
    ```
 
-3**Set up the environment:**
+3 **Set up the environment:**
 
    Create a `.env` file in the root directory with your environment variables (check .env.example):
 

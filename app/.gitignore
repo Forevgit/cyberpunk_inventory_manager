@@ -1,0 +1,103 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.wheel
+
+# PyInstaller
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pytest cache
+.pytest_cache/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+coverage.*
+.cache
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+*.mocha.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Virtual environment
+venv/
+.env
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# PyCharm
+.idea/
+*.iml
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Docker
+*.pid
+*.log
+docker-compose.override.yml
+
+# MacOS
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+
+# Alembic
+alembic/versions/*.pyc
+
+# MyPy
+.mypy_cache/
+dmypy.json
+dmypy.json.*/
+
+# Pyre
+.pyre/

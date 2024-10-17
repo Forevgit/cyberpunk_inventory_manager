@@ -60,7 +60,15 @@ app/
    cd cyberpunk_inventory_manager
    ```
 
-2. **Set up the environment:**
+2. **Setting Up a Virtual Environment (Optional)**
+   
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate(on macOS)
+
+   ```
+
+3**Set up the environment:**
 
    Create a `.env` file in the root directory with your environment variables (check .env.example):
 

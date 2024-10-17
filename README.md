@@ -133,14 +133,6 @@ To see the parameters, please follow the link. http://localhost:8000/docs
 - **PUT** `/inventory/{id}`: Update an existing inventory item.
 - **DELETE** `/inventory/{id}`: Delete an inventory item.
 
-## Contributing
-
-Feel free to submit issues, fork the repository, and create pull requests. Contributions are welcome!
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
 ## Acknowledgments
 
 - **FastAPI** - For its simplicity and performance.

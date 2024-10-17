@@ -20,14 +20,12 @@ async def login(user_data: UserLogin, service_token: TokenService = Depends(), s
         "token_type": "bearer"
     }
 
-
 @router.post("/register", response_model=UserOut)
 async def register(user_data: UserCreate, service: AuthService = Depends(get_auth_service)) -> UserOut:
     user = await service.create_user(user_data)
     if not user:
         raise HTTPException(status_code=400, detail="User with this email already exists")
     return user
-
 
 @router.post("/refresh", response_model=Token)
 async def refresh_token(

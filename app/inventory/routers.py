@@ -6,12 +6,9 @@ from inventory import schemas
 from inventory.service import InventoryService
 from inventory.dependencies import get_inventory_service
 
-
-
 router = APIRouter(
     dependencies=[Depends(get_current_user)]
 )
-
 
 @router.post("/", response_model=schemas.InventoryItem)
 async def create_inventory_item(
@@ -20,7 +17,6 @@ async def create_inventory_item(
 ):
     return await service.create_inventory_item(item=item)
 
-
 @router.get("/", response_model=List[schemas.InventoryItem])
 async def read_inventory_items(
     skip: int = 0,
@@ -28,7 +24,6 @@ async def read_inventory_items(
     service: InventoryService = Depends(get_inventory_service)
 ):
     return await service.get_inventory_items(skip=skip, limit=limit)
-
 
 @router.get("/{item_id}", response_model=schemas.InventoryItem)
 async def read_inventory_item(
@@ -40,7 +35,6 @@ async def read_inventory_item(
         raise HTTPException(status_code=404, detail="Item not found")
     return db_item
 
-
 @router.put("/{item_id}", response_model=schemas.InventoryItem)
 async def update_inventory_item(
     item_id: int,
@@ -48,7 +42,6 @@ async def update_inventory_item(
     service: InventoryService = Depends(get_inventory_service)
 ):
     return await service.update_inventory_item(item_id=item_id, item=item)
-
 
 @router.patch("/{item_id}", response_model=schemas.InventoryItem)
 async def update_inventory_item(
@@ -60,7 +53,6 @@ async def update_inventory_item(
     if not updated_item:
         raise HTTPException(status_code=404, detail="Item not found")
     return updated_item
-
 
 @router.delete("/{item_id}", response_model=schemas.InventoryItem)
 async def delete_inventory_item(

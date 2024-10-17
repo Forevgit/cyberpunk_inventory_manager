@@ -9,7 +9,6 @@ def event_loop():
     yield loop
     loop.close()
 
-
 @pytest.fixture
 async def authenticated_client():
     async with AsyncClient(app=app, base_url="http://test") as ac:
